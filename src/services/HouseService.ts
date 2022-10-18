@@ -5,8 +5,13 @@ const getAll = () => {
 	return http.get<IHouse[]>("/api/houses");
 }
 
+const findHouse = (id: string) => {
+	return http.get<IHouse>(`/api/houses/${id}`);
+}
+
 const HouseService = {
-	getAll
+	getAll,
+	findHouse
 }
 
 export default HouseService;

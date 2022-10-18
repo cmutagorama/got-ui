@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Footer } from '../components/Footer';
+// import { Footer } from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 interface RootpageProps {
@@ -12,7 +12,7 @@ const RootPage: FC<RootpageProps> = (props: RootpageProps) => {
 		<div className="flex flex-col">
 			<Navbar />
 			{props.children}
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
