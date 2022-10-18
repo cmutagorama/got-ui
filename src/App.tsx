@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes';
 
 function App() {
+	// const items = 
   return (
-    <div className="App">
-      <h3>Hello World</h3>
-    </div>
+		<BrowserRouter>
+			<AppRoutes/>
+		</BrowserRouter>
   );
 }
 
