@@ -1,5 +1,6 @@
 import React from "react";
 import { Bars3Icon, BookOpenIcon, HomeModernIcon, UsersIcon } from '@heroicons/react/24/solid'
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -8,12 +9,12 @@ export default function Navbar() {
 		<nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-gray-900">
 			<div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
 				<div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
-					<a
+					<Link
 						className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
-						href="#pablo"
+						to="/"
 					>
 						Game of Thrones
-					</a>
+					</Link>
 					<button
 						className="block px-3 py-1 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
 						type="button"
