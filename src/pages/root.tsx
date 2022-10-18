@@ -12,7 +12,7 @@ const RootPage: FC<RootpageProps> = (props: RootpageProps) => {
 		<div className="flex flex-col">
 			<Navbar />
 			{props.children}
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
