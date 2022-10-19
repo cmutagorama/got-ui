@@ -1,8 +1,8 @@
 import http from "../http-common";
 import { IHouse } from "../types/House";
 
-const getAll = () => {
-	return http.get<IHouse[]>("/api/houses");
+const getAll = (page: number = 1, pageSize: number = 10) => {
+	return http.get<IHouse[]>(`/api/houses?page=${page}&pageSize=${pageSize}`);
 }
 
 const findHouse = (id: string) => {
