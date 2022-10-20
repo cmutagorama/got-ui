@@ -10,7 +10,7 @@ const AppRoutes: FC = () => {
 		<Routes>
 			<Route path='/' element={<Home />} />
 			<Route path='/about' element={<About />} />
-			<Route path='house/:id' element={<House />} />
+			<Route path='/house/:id' element={<House />} />
 			<Route path='*' element={<NoMatch />} />
 		</Routes>
 	)
