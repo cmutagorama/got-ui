@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![example workflow](https://github.com/cmutagorama/got-ui/actions/workflows/build.yml/badge.svg)
 ## Steps to run the project
 
 In the project directory, you can run the following commands:
