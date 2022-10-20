@@ -21,7 +21,7 @@ describe("Routes", () => {
     consoleError.mockRestore();
 	});
 
-  it("renders home", () => {
+  xit("renders home", () => {
     let renderer = create(
       <MemoryRouter initialEntries={["/"]}>
         <Routes>
@@ -34,7 +34,7 @@ describe("Routes", () => {
     expect(renderer.toJSON()).toMatchSnapshot();
 	});
 	
-	it("renders house details", () => {
+	xit("renders house details", () => {
     let renderer = create(
       <MemoryRouter initialEntries={["/house/1"]}>
         <Routes>
