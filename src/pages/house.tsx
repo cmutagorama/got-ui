@@ -1,9 +1,10 @@
+import { ArrowSmallLeftIcon } from '@heroicons/react/24/solid';
 import { AxiosResponse } from 'axios';
-import React, { FC, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { FC, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { RowDetail } from '../components/RowDetail';
-import HouseService from '../services/HouseService'
-import { IHouse } from '../types/House'
+import HouseService from '../services/HouseService';
+import { IHouse } from '../types/House';
 import RootPage from './root';
 
 const initialState = {
@@ -25,9 +26,10 @@ const initialState = {
 	swornMembers: []
 };
 
-const House: FC = (props) => {
+const House: FC = () => {
 	const params = useParams();
 	const [house, setHouse] = useState<IHouse>(initialState);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (!!params.id) {
@@ -42,11 +44,16 @@ const House: FC = (props) => {
 	return (
 		<RootPage header='House'>
 			<div className="px-6 overflow-hidden bg-white shadow sm:rounded-lg">
-				<div className="px-4 py-5 sm:px-6">
+				<div className="px-2 py-3 md:px-4">
+					<button onClick={() => navigate("/")} className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-200 border-0 rounded focus:outline-none hover:bg-gray-300 md:mt-0">
+						<ArrowSmallLeftIcon className="w-4 h-4 mr-2"/>Go back
+    			</button>
+				</div>
+				<div className="px-2 py-5 md:px-4 sm:px-6">
 					<h3 className="text-lg font-medium leading-6 text-gray-900">House Details</h3>
 					<p className="max-w-2xl mt-1 text-sm text-gray-500">Read all information</p>
 				</div>
-				<div className="border-t border-gray-200">
+				<div className="px-2 border-t border-gray-200 md:px-4">
 					<dl>
 						{house.name.length > 0 && (
 							<RowDetail title='Name' text={house.name} isGray={true} />

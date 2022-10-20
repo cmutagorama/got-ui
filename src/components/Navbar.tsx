@@ -1,5 +1,5 @@
 import React from "react";
-import { Bars3Icon, BookOpenIcon, HomeModernIcon, UsersIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon } from '@heroicons/react/24/solid'
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -32,28 +32,12 @@ export default function Navbar() {
 				>
 					<ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
 						<li className="nav-item">
-							<a
+							<Link
 								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-								href="#pablo"
+								to="/about"
 							>
-								<HomeModernIcon className="w-6 h-6" /><span className="ml-2">Houses</span>
-							</a>
-						</li>
-						<li className="nav-item">
-							<a
-								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-								href="#pablo"
-							>
-								<UsersIcon className="w-6 h-6" /><span className="ml-2">Characters</span>
-							</a>
-						</li>
-						<li className="nav-item">
-							<a
-								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-								href="#pablo"
-							>
-								<BookOpenIcon className="w-6 h-6" /><span className="ml-2">Books</span>
-							</a>
+								<span className="ml-2">About</span>
+							</Link>
 						</li>
 					</ul>
 				</div>
