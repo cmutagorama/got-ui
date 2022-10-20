@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`My app renders correctly 1`] = `null`;
-
-exports[`Routes renders home 1`] = `
+exports[`Routes should render 404 page 1`] = `
 <div
   className="flex flex-col"
 >
@@ -54,78 +52,123 @@ exports[`Routes renders home 1`] = `
           >
             <a
               className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-              href="#pablo"
+              href="/about"
+              onClick={[Function]}
             >
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.006 3.705a.75.75 0 00-.512-1.41L6 6.838V3a.75.75 0 00-.75-.75h-1.5A.75.75 0 003 3v4.93l-1.006.365a.75.75 0 00.512 1.41l16.5-6z"
-                />
-                <path
-                  clipRule="evenodd"
-                  d="M3.019 11.115L18 5.667V9.09l4.006 1.456a.75.75 0 11-.512 1.41l-.494-.18v8.475h.75a.75.75 0 010 1.5H2.25a.75.75 0 010-1.5H3v-9.129l.019-.006zM18 20.25v-9.565l1.5.545v9.02H18zm-9-6a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75H9z"
-                  fillRule="evenodd"
-                />
-              </svg>
               <span
                 className="ml-2"
               >
-                Houses
+                About
               </span>
             </a>
           </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section
+    className="flex items-center h-full p-16 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <div
+      className="container flex flex-col items-center justify-center px-5 mx-auto my-8"
+    >
+      <div
+        className="max-w-md text-center"
+      >
+        <h2
+          className="mb-8 font-extrabold text-9xl dark:text-gray-600"
+        >
+          <span
+            className="sr-only"
+          >
+            Error
+          </span>
+          404
+        </h2>
+        <p
+          className="text-2xl font-semibold md:text-3xl"
+        >
+          Sorry, we couldn't find this page.
+        </p>
+        <p
+          className="mt-4 mb-8 dark:text-gray-400"
+        >
+          But dont worry, you can find plenty of other things on our homepage.
+        </p>
+        <a
+          className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
+          href="/"
+          onClick={[Function]}
+        >
+          Back to homepage
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Routes should render about page 1`] = `null`;
+
+exports[`Routes should render home page 1`] = `
+<div
+  className="flex flex-col"
+>
+  <nav
+    className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-gray-900"
+  >
+    <div
+      className="container flex flex-wrap items-center justify-between px-4 mx-auto"
+    >
+      <div
+        className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start"
+      >
+        <a
+          className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
+          href="/"
+          onClick={[Function]}
+        >
+          Game of Thrones
+        </a>
+        <button
+          className="block px-3 py-1 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="lg:flex flex-grow items-center hidden"
+        id="example-navbar-danger"
+      >
+        <ul
+          className="flex flex-col list-none lg:flex-row lg:ml-auto"
+        >
           <li
             className="nav-item"
           >
             <a
               className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-              href="#pablo"
+              href="/about"
+              onClick={[Function]}
             >
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"
-                />
-              </svg>
               <span
                 className="ml-2"
               >
-                Characters
-              </span>
-            </a>
-          </li>
-          <li
-            className="nav-item"
-          >
-            <a
-              className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-              href="#pablo"
-            >
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z"
-                />
-              </svg>
-              <span
-                className="ml-2"
-              >
-                Books
+                About
               </span>
             </a>
           </li>
@@ -559,4 +602,117 @@ exports[`Routes renders home 1`] = `
 </div>
 `;
 
-exports[`Routes renders house details 1`] = `null`;
+exports[`Routes should render house details page 1`] = `
+<div
+  className="flex flex-col"
+>
+  <nav
+    className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-gray-900"
+  >
+    <div
+      className="container flex flex-wrap items-center justify-between px-4 mx-auto"
+    >
+      <div
+        className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start"
+      >
+        <a
+          className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
+          href="/"
+          onClick={[Function]}
+        >
+          Game of Thrones
+        </a>
+        <button
+          className="block px-3 py-1 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="lg:flex flex-grow items-center hidden"
+        id="example-navbar-danger"
+      >
+        <ul
+          className="flex flex-col list-none lg:flex-row lg:ml-auto"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+              href="/about"
+              onClick={[Function]}
+            >
+              <span
+                className="ml-2"
+              >
+                About
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-6 overflow-hidden bg-white shadow sm:rounded-lg"
+  >
+    <div
+      className="px-2 py-3 md:px-4"
+    >
+      <button
+        className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-200 border-0 rounded focus:outline-none hover:bg-gray-300 md:mt-0"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="w-4 h-4 mr-2"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z"
+            fillRule="evenodd"
+          />
+        </svg>
+        Go back
+      </button>
+    </div>
+    <div
+      className="px-2 py-5 md:px-4 sm:px-6"
+    >
+      <h3
+        className="text-lg font-medium leading-6 text-gray-900"
+      >
+        House Details
+      </h3>
+      <p
+        className="max-w-2xl mt-1 text-sm text-gray-500"
+      >
+        Read all information
+      </p>
+    </div>
+    <div
+      className="px-2 border-t border-gray-200 md:px-4"
+    >
+      <dl />
+    </div>
+  </div>
+</div>
+`;

@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from "../pages/home";
 import House from "../pages/house";
+import { About } from "../pages/about";
+import { NoMatch } from "../pages/nomatch";
 
 describe("Routes", () => {
 	let consoleWarn: jest.SpyInstance;
@@ -21,7 +23,7 @@ describe("Routes", () => {
     consoleError.mockRestore();
 	});
 
-  it("renders home", () => {
+  it("should render home page", () => {
     let renderer = create(
       <MemoryRouter initialEntries={["/"]}>
         <Routes>
@@ -34,11 +36,37 @@ describe("Routes", () => {
     expect(renderer.toJSON()).toMatchSnapshot();
 	});
 	
-	it("renders house details", () => {
+	it("should render house details page", () => {
     let renderer = create(
       <MemoryRouter initialEntries={["/house/1"]}>
         <Routes>
-          <Route path="/" element={<House />}>
+          <Route path="/house/:id" element={<House />}>
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+	});
+	
+	it("should render about page", () => {
+    let renderer = create(
+      <MemoryRouter initialEntries={["/about"]}>
+        <Routes>
+          <Route path="/" element={<About />}>
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+	});
+	
+	it("should render 404 page", () => {
+    let renderer = create(
+      <MemoryRouter initialEntries={["/wrong-page"]}>
+        <Routes>
+          <Route path="*" element={<NoMatch />}>
           </Route>
         </Routes>
       </MemoryRouter>
