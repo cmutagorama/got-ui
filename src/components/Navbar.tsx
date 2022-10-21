@@ -34,9 +34,17 @@ export default function Navbar() {
 						<li className="nav-item">
 							<Link
 								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-								to="/about"
+								to="/characters"
 							>
-								<span className="ml-2">About</span>
+								<span className="ml-2">Characters</span>
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+								to="/books"
+							>
+								<span className="ml-2">Books</span>
 							</Link>
 						</li>
 					</ul>
