@@ -1,6 +1,7 @@
 import React from "react";
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg"
 
 export default function Navbar() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
 						className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
 						to="/"
 					>
-						Game of Thrones
+						<img src={logo} alt="GOT logo" style={{height: '40px', width: '300px'}}/>
 					</Link>
 					<button
 						className="block px-3 py-1 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
