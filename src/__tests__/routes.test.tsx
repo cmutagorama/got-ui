@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import Home from "../pages/home";
 import House from "../pages/house";
-import { About } from "../pages/about";
 import { NoMatch } from "../pages/nomatch";
 import Books from "../pages/books";
 
