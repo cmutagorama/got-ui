@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { HomeModernIcon } from '@heroicons/react/24/solid';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import crownIcon from "../assets/crown-icon.svg"
 
 type CardProps = {
 	name: string;
@@ -16,7 +16,7 @@ export function CardItem({ name, words, url }: CardProps) {
 				className="block h-full p-8 bg-gray-900 border border-gray-800 shadow-xl rounded-xl"
 				to={`/house/${url}`}
 			>
-				<HomeModernIcon className="w-10 h-10 text-blue-400" />
+				<img src={crownIcon} alt="Icon" />
 				<h3 className="mt-3 text-xl font-bold text-white">{name}</h3>
 				<p className="mt-4 text-sm text-gray-300">{words}</p>
 			</Link>
