@@ -9,6 +9,7 @@ import Home from "../pages/home";
 import House from "../pages/house";
 import { About } from "../pages/about";
 import { NoMatch } from "../pages/nomatch";
+import Books from "../pages/books";
 
 describe("Routes", () => {
 	let consoleWarn: jest.SpyInstance;
@@ -49,11 +50,11 @@ describe("Routes", () => {
     expect(renderer.toJSON()).toMatchSnapshot();
 	});
 	
-	it("should render about page", () => {
+	it("should render books page", () => {
     let renderer = create(
-      <MemoryRouter initialEntries={["/about"]}>
+      <MemoryRouter initialEntries={["/books"]}>
         <Routes>
-          <Route path="/" element={<About />}>
+          <Route path="/books" element={<Books />}>
           </Route>
         </Routes>
       </MemoryRouter>
