@@ -32,14 +32,14 @@ export default function Navbar() {
 					id="example-navbar-danger"
 				>
 					<ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
-						<li className="nav-item">
+						{/* <li className="nav-item">
 							<Link
 								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
 								to="/characters"
 							>
 								<span className="ml-2">Characters</span>
 							</Link>
-						</li>
+						</li> */}
 						<li className="nav-item">
 							<Link
 								className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
