@@ -7,16 +7,21 @@ import RootPage from "./root";
 
 const Books: FC = () => {
 	const [books, setBooks] = useState<IBook[]>([]);
+	const [loading, setLoading] = useState<boolean>(false);
 
 	useEffect(() => {
 		getBooks();
 	}, []);
 
 	const getBooks = () => {
+		setLoading(true);
+
 		BookService.getAll().then((res: AxiosResponse) => {
+			setLoading(false);
 			setBooks(res.data);
 		}).catch((e: Error) => {
 			// can set error message
+			setLoading(false);
 			console.log(e);
 		})
 	}
@@ -51,7 +56,12 @@ const Books: FC = () => {
 									</tr>
 								</thead>
 								<tbody className="bg-white divide-y divide-gray-200">
-									{books.map((book: IBook, index: number) => (	
+									{loading && (
+										<tr className="transition-all hover:bg-gray-100 hover:shadow-lg hover:cursor-pointer">
+											<td className="px-6 py-4 text-center whitespace-nowrap" colSpan={6}>Loading...</td>
+										</tr>
+									)}
+									{!loading && books.map((book: IBook, index: number) => (	
 										<tr className="transition-all hover:bg-gray-100 hover:shadow-lg hover:cursor-pointer" key={index}>
 											<td className="px-6 py-4 whitespace-nowrap">
 												<div className="text-sm text-gray-900">{book.name}</div>
