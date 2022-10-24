@@ -26,9 +26,9 @@ const Characters: FC = () => {
 		<RootPage header="Characters">
 			<div className="grid gap-4 px-4 py-3 md:grid-cols-4">
 				{characters.map((char, index) => (
-					<div className="relative block bg-black group" key={index}>
+					<div className="relative block bg-black group rounded-xl" key={index}>
 						<LazyLoadImage
-							className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75 group-hover:opacity-50"
+							className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75 rounded-xl group-hover:opacity-50"
 							alt={char.title}
 							src={char.imageUrl}
 							placeholderSrc={placeholder}
