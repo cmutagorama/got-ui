@@ -10,12 +10,12 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 import Select from '../components/Select';
 
 const Houses: FC = () => {
-	const options: number[] = [5, 10, 20, 50, 100];
+	const options: number[] = [12, 24, 48, 96];
 	const [houses, setHouses] = useState<IHouse[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 
 	const [page, setPage] = useState<number>(0);
-	const [pageSize, setPageSize] = useState<number>(10);
+	const [pageSize, setPageSize] = useState<number>(12);
 
 	const handlePageChange = (page: number) => {
 		setPage(page);
