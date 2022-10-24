@@ -9,6 +9,7 @@ import Home from "../pages/home";
 import House from "../pages/house";
 import { NoMatch } from "../pages/nomatch";
 import Books from "../pages/books";
+import Characters from "../pages/characters";
 
 describe("Routes", () => {
 	let consoleWarn: jest.SpyInstance;
@@ -41,6 +42,19 @@ describe("Routes", () => {
       <MemoryRouter initialEntries={["/house/1"]}>
         <Routes>
           <Route path="/house/:id" element={<House />}>
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    );
+
+    expect(renderer.toJSON()).toMatchSnapshot();
+	});
+
+	it("should render characters page", () => {
+    let renderer = create(
+      <MemoryRouter initialEntries={["/characters"]}>
+        <Routes>
+          <Route path="/characters" element={<Characters />}>
           </Route>
         </Routes>
       </MemoryRouter>
