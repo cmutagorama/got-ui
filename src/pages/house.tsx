@@ -45,7 +45,7 @@ const House: FC = () => {
 		<RootPage header='House'>
 			<div className="px-6 overflow-hidden bg-white shadow sm:rounded-lg">
 				<div className="px-2 py-3 md:px-4">
-					<button onClick={() => navigate("/")} className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-200 border-0 rounded focus:outline-none hover:bg-gray-300 md:mt-0">
+					<button onClick={() => navigate("/houses")} className="inline-flex items-center px-3 py-1 mt-4 text-base bg-gray-200 border-0 rounded focus:outline-none hover:bg-gray-300 md:mt-0">
 						<ArrowSmallLeftIcon className="w-4 h-4 mr-2"/>Go back
     			</button>
 				</div>
